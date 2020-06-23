@@ -3,7 +3,6 @@
 /// Date : 23/06/2020 12:22
 ///-----------------------------------------------------------------
 
-using Com.HolidayGame.MoveExperience.Managers;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience {
@@ -19,11 +18,6 @@ namespace Com.HolidayGame.MoveExperience {
         public float GetAxisVertical { get => controller.GetAxisVertical; }
         public bool Jump { get => controller.Jump; }
 
-        private Controller controller = null;  
-
-		public void Init()
-        {
-            controller = InputManager.Instance.Controller; 
-        }
+		[SerializeField] private Controller controller = null;  
 	}
 }

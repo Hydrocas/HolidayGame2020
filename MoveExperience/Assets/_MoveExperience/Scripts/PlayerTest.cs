@@ -7,11 +7,9 @@ using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience {
 	public class PlayerTest : MonoBehaviour {
+
         [SerializeField] private ControllerSettings controller; 
-		private void Start () {
-            controller.Init(); 
-		}
-		
+
 		private void Update () {
             Debug.Log(controller.Jump); 
 		}

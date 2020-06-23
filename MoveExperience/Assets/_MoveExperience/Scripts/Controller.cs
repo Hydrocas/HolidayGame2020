@@ -4,36 +4,24 @@
 ///-----------------------------------------------------------------
 
 using UnityEngine;
+using System;
 
 namespace Com.HolidayGame.MoveExperience {
-	public class Controller : MonoBehaviour {
+	[Serializable]
+	public class Controller {
 
-        private string horizontalAxis = "Horizontal"; 
-		private string verticalAxis = "Vertical";
-        private string jumpAxis = "Jump"; 
-
-		private float _getAxisHorizontal;
-		private float _getAxisVertical;
-		private bool _jump;
+        [SerializeField] private string horizontalAxis = "Horizontal";
+		[SerializeField] private string verticalAxis = "Vertical";
+		[SerializeField] private string jumpAxis = "Jump"; 
 
 		public float GetAxisHorizontal {
-			get { return _getAxisHorizontal; }
+			get { return Input.GetAxis(horizontalAxis); }
 		}
 		public float GetAxisVertical {
-			get { return _getAxisVertical; }
+			get { return Input.GetAxis(verticalAxis); }
 		}
 		public bool Jump {
-			get { return _jump; }
-		}
-
-		private void Start () {
-			
-		}
-		
-		public void Update () {
-			_getAxisHorizontal = Input.GetAxis (horizontalAxis);
-			_getAxisVertical = Input.GetAxis (verticalAxis);
-			_jump = Input.GetAxis (jumpAxis) == 1;
+			get { return Input.GetButtonDown(jumpAxis); }
 		}
 	}
 }
