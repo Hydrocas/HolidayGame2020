@@ -3,9 +3,8 @@
 /// Date : 30/05/2020 21:02
 ///-----------------------------------------------------------------
 
-using UnityEngine;
 
-namespace Com.HolidayGame.Common.Utils {
+namespace UnityEngine {
 	public static class Extensions {
 
         private const string LOG_TAG = "[{0}] ";
@@ -30,4 +29,5 @@ namespace Com.HolidayGame.Common.Utils {
             return string.Concat(string.Format(LOG_TAG, @object.GetType().Name), message);
         }
     }
+
 }
