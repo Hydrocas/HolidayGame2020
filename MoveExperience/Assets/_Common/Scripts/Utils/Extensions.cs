@@ -5,8 +5,7 @@
 
 using UnityEngine;
 
-namespace UnityEngine
-{
+namespace Com.HolidayGame.Common.Utils {
 	public static class Extensions {
 
         private const string LOG_TAG = "[{0}] ";

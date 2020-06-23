@@ -5,7 +5,7 @@
 
 using UnityEngine;
 
-namespace Com.HolidayGame.MoveExperience.Objects.Player {
+namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 	public class Player : MonoBehaviour {
 	
 		private void Start () {

@@ -4,27 +4,31 @@
 ///-----------------------------------------------------------------
 
 using Com.HolidayGame.MoveExperience.Objects.Controller;
+using Com.HolidayGame.MoveExperience.Objects.PlayerObjects;
+using Com.HolidayGame.MoveExperience.Objects.Screens;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.Managers {
 	public class GameManager : MonoBehaviour {
 
-		[SerializeField] private ControllerSettings controller; 
+		[SerializeField] private ControllerSettings controller = null;
+		[SerializeField] private Player playerPrefab = null;
+
 		public void Init()
 		{
-			//Appeler le Init dans le GameLauncher 
 			//InitFeatureManager
-			//Instancier Player 
-		}
-		private void Start () {
-			Init(); 
+			//Instantiate(playerPrefab);
+			FeaturesScreen.Instance.Init();
+
+			DontDestroyOnLoad(gameObject);
 		}
 		
-		private void Update () {
-			if(controller.Cancel) ControllerOnCancel(); 
+		private void Update () 
+		{
+			if(controller.Start) ControllerOnStart();
 		}
 
-		private void ControllerOnCancel()
+		private void ControllerOnStart()
 		{
 			//Roue cranté 
 		}
