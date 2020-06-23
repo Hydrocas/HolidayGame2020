@@ -12,7 +12,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.Features {
 
 		public override void On( Player player ) {
 			base.On (player);
-			player.InitEngine (new DefautlEngine ());
+			player.InitEngine (new DefaultEngine ());
 		}
 	}
 }
