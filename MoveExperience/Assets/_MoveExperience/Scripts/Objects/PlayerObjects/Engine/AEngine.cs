@@ -7,7 +7,7 @@ using Com.HolidayGame.MoveExperience.Objects.Controller;
 using System;
 using UnityEngine;
 
-namespace Com.HolidayGame.MoveExperience.Objects.Player.Engine {
+namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 	public abstract class AEngine {
 		protected Action _doAction;
 		public Action DoAction => _doAction;

@@ -4,11 +4,11 @@
 ///-----------------------------------------------------------------
 
 using Com.HolidayGame.MoveExperience.Objects.Controller;
-using Com.HolidayGame.MoveExperience.Objects.Player.Engine;
+using Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine;
 using Com.IsartDigital.Common.Utils.Game;
 using UnityEngine;
 
-namespace Com.HolidayGame.MoveExperience.Objects.Player {
+namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 	public class Player : AStateMachine {
 		[SerializeField] protected ControllerSettings controller = default;
 		[SerializeField] protected Rigidbody rb;
