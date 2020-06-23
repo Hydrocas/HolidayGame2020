@@ -31,10 +31,10 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		// ============================================================================
 		//							   ***** DOACTIONS *****
 		// ============================================================================
-		/*protected override void Start() {
+		protected override void Start() {
 			base.Start();
-			InitEngine(new DefautlEngine());
-		}*/
+			if (engine == null) InitEngine(new DefautlEngine());
+		}
 
 		/// <summary>
 		/// Permet de donner un moteur au Player
