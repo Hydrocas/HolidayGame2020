@@ -1,12 +1,12 @@
 ///-----------------------------------------------------------------
 /// Author : Nathan_Pflier
-/// Date : 23/06/2020 17:39
+/// Date : 23/06/2020 17:57
 ///-----------------------------------------------------------------
 
 using UnityEngine;
 
-namespace Com.HolidayGame.MoveExperience.Feature {
-	public class AFeature : MonoBehaviour {
+namespace Com.HolidayGame.MoveExperience.Objects.Features {
+	public class DefaultFeature : AFeature {
 	
 		private void Start () {
 			
@@ -15,9 +15,5 @@ namespace Com.HolidayGame.MoveExperience.Feature {
 		private void Update () {
 			
 		}
-
-		virtual public void On() { }
-
-		virtual public void Off() { }
 	}
 }

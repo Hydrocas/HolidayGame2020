@@ -1,6 +1,6 @@
 ///-----------------------------------------------------------------
-/// Author : Valérian Segado
-/// Date : 23/06/2020 15:44
+/// Author : Nathan_Pflier
+/// Date : 23/06/2020 17:39
 ///-----------------------------------------------------------------
 
 using UnityEngine;
@@ -11,9 +11,9 @@ namespace Com.HolidayGame.MoveExperience.Objects.Features {
 		private void Start () {
 			
 		}
-		
-		private void Update () {
-			
-		}
+
+		virtual public void On() { }
+
+		virtual public void Off() { }
 	}
 }

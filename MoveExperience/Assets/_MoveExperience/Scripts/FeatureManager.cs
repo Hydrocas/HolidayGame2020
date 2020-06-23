@@ -3,7 +3,7 @@
 /// Date : 23/06/2020 18:03
 ///-----------------------------------------------------------------
 
-using Com.HolidayGame.MoveExperience.Feature;
+using Com.HolidayGame.MoveExperience.Objects.Features;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +25,7 @@ namespace Com.HolidayGame.MoveExperience {
 		}
 
 		private void GetFeature( int feature ) {
+			if (currentFeature != null) currentFeature.Off ();
 			currentFeature = featureList[feature];
 			currentFeature.On ();
 		}
