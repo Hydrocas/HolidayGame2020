@@ -12,7 +12,7 @@ namespace Com.HolidayGame.MoveExperience {
         [SerializeField] private ControllerSettings controller; 
 
 		private void Update () {
-            Debug.Log(controller.Jump); 
+			Debug.Log(controller.Cancel); 
 		}
 	}
 }
