@@ -8,9 +8,9 @@ using UnityEngine;
 namespace Com.HolidayGame.MoveExperience {
 	public class Controller : MonoBehaviour {
 
-		[SerializeField] private string horizontalAxis;
-		[SerializeField] private string verticalAxis;
-		[SerializeField] private string jumpAxis;
+        private string horizontalAxis = "Horizontal"; 
+		private string verticalAxis = "Vertical";
+        private string jumpAxis = "Jump"; 
 
 		private float _getAxisHorizontal;
 		private float _getAxisVertical;
@@ -30,7 +30,7 @@ namespace Com.HolidayGame.MoveExperience {
 			
 		}
 		
-		private void Update () {
+		public void Update () {
 			_getAxisHorizontal = Input.GetAxis (horizontalAxis);
 			_getAxisVertical = Input.GetAxis (verticalAxis);
 			_jump = Input.GetAxis (jumpAxis) == 1;
