@@ -5,7 +5,7 @@
 
 using UnityEngine;
 
-namespace Com.HolidayGame.MoveExperience {
+namespace Com.HolidayGame.MoveExperience.Objects.Controller {
 	
 	[CreateAssetMenu(
 		menuName = "MoveExperience/Controller",

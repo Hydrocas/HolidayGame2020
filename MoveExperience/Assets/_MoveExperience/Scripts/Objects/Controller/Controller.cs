@@ -6,7 +6,7 @@
 using UnityEngine;
 using System;
 
-namespace Com.HolidayGame.MoveExperience {
+namespace Com.HolidayGame.MoveExperience.Objects.Controller {
 	[Serializable]
 	public class Controller {
 
