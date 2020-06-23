@@ -15,7 +15,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.Features {
 		}
 
 		virtual public void On(Player player) {
-			player.InitEngine ();
+			//player.InitEngine ();
 		}
 
 		virtual public void Off( Player player ) { 
