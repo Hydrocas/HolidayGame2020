@@ -3,32 +3,34 @@
 /// Date : 23/06/2020 16:26
 ///-----------------------------------------------------------------
 
+using Com.HolidayGame.MoveExperience.Objects.Screens;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.Managers {
 	public class GameLauncher : MonoBehaviour {
 
-		[SerializeField] private GameManager gameManager;
-		[SerializeField] private FeaturesScreen featuresScreen;
+		[SerializeField] private GameManager gameManager = null;
+		[SerializeField] private GameObject rootCanvas = null;
 
 		private static bool isStarted;
 
 		private void Awake()
 		{
-			if (isStarted) Destroy(gameObject);
-			else
+			if (!isStarted) 
 			{
 				isStarted = true;
 				Init();
 			}
+
+			Destroy(gameObject);
 		}
 
 		private void Init()
 		{
 			gameManager = Instantiate(gameManager);
-			featuresScreen = Instantiate(featuresScreen);
+			DontDestroyOnLoad(Instantiate(rootCanvas));
 
-			//gameManager.Init();
+			gameManager.Init();
 		}
 	}
 }

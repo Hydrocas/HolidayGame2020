@@ -9,10 +9,10 @@ using UnityEngine;
 namespace Com.HolidayGame.MoveExperience {
 	public class PlayerTest : MonoBehaviour {
 
-        [SerializeField] private ControllerSettings controller; 
+        [SerializeField] private ControllerSettings controller = null; 
 
 		private void Update () {
-			Debug.Log(controller.Cancel); 
+			Debug.Log(controller.Start); 
 		}
 	}
 }
