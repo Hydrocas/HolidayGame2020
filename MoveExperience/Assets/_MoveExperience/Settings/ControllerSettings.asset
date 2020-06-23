@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b38620260100ee4f96b6792fc267c25, type: 3}
   m_Name: ControllerSettings
   m_EditorClassIdentifier: 
-  _test: 42
+  controller:
+    horizontalAxis: Horizontal
+    verticalAxis: Vertical
+    jumpAxis: Jump
+    cancel: Cancel
