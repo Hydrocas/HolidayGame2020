@@ -4,21 +4,14 @@
 ///-----------------------------------------------------------------
 
 using Com.HolidayGame.MoveExperience.Objects.PlayerObjects;
+using Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.Features {
 	public class AFeature : MonoBehaviour {
 
-		
-		private void Start () {
-			
-		}
+		virtual public void On( Player player ) { }
 
-		virtual public void On(Player player) {
-			//player.InitEngine ();
-		}
-
-		virtual public void Off( Player player ) { 
-		}
+		virtual public void Off( Player player ) { }
 	}
 }
