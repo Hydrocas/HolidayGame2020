@@ -7,7 +7,7 @@ using Com.HolidayGame.MoveExperience.Objects.Controller;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
-	public class DefautlEngine : AEngine {
+	public class DefaultEngine : AEngine {
 
 		public override void Init(Rigidbody rb, ControllerSettings controller) {
 			base.Init(rb, controller);
@@ -19,7 +19,8 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		}
 
 		protected void DoActionMove() {
-			Debug.Log("Move");
+			rigidBody.transform.position += Vector3.forward * (5 * Time.deltaTime * controller.GetAxisVertical);
+			rigidBody.transform.position += Vector3.right * (5 * Time.deltaTime * controller.GetAxisHorizontal);
 		}
 	}
 }

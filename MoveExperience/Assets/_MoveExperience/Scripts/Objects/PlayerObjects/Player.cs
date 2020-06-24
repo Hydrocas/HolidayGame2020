@@ -33,7 +33,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		// ============================================================================
 		protected override void Start() {
 			base.Start();
-			if (engine == null) InitEngine(new DefautlEngine());
+			if (engine == null) InitEngine(new DefaultEngine());
 		}
 
 		/// <summary>
