@@ -15,7 +15,6 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		protected Rigidbody rigidBody;
 		protected ControllerSettings controller;
 
-
 		public virtual void Init(Rigidbody rb, ControllerSettings controller) {
 			SetModeVoid();
 

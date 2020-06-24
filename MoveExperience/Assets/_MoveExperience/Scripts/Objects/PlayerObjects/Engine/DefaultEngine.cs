@@ -7,7 +7,7 @@ using Com.HolidayGame.MoveExperience.Objects.Controller;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
-	public class DefautlEngine : AEngine {
+	public class DefaultEngine : AEngine {
 
 		public override void Init(Rigidbody rb, ControllerSettings controller) {
 			base.Init(rb, controller);
