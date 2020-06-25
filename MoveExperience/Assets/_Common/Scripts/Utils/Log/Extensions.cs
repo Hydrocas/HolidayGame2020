@@ -1,9 +1,11 @@
+
+
+using Com.HolidayGame.MoveExperience.Objects.PlayerObjects;
+using System;
 ///-----------------------------------------------------------------
 /// Author : Hugo TEYSSIER
 /// Date : 30/05/2020 21:02
 ///-----------------------------------------------------------------
-
-
 namespace UnityEngine {
 	public static class Extensions {
 
@@ -29,5 +31,4 @@ namespace UnityEngine {
             return string.Concat(string.Format(LOG_TAG, @object.GetType().Name), message);
         }
     }
-
 }
