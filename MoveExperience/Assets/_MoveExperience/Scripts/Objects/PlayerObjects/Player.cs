@@ -24,11 +24,13 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		// ============================================================================
 		protected override void SetResume() {
 			base.SetResume();
+			if (engine != null) engine.Resume();
 			//rb
 		}
 
 		protected override void SetPause() {
 			base.SetPause();
+			if (engine != null) engine.Pause();
 			//rb
 		}
 

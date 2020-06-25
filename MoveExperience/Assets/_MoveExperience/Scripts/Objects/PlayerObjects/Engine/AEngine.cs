@@ -23,7 +23,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 			this.controller = controller;
 		}
 
-		/*// ============================================================================
+		// ============================================================================
 		//							 ***** PAUSE / RESUME *****
 		// ============================================================================
 		public virtual void Pause() {
@@ -31,7 +31,8 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		}
 
 		public virtual void Resume() {
-		}*/
+
+		}
 
 		// ============================================================================
 		//							   ***** DOACTIONS *****
