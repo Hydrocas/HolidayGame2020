@@ -5,6 +5,7 @@
 
 using Com.HolidayGame.MoveExperience.Objects.Features;
 using Com.HolidayGame.MoveExperience.Objects.PlayerObjects;
+using Com.HolidayGame.MoveExperience.Objects.Screens;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,19 +13,24 @@ using UnityEngine;
 namespace Com.HolidayGame.MoveExperience {
 	public class FeatureManager : MonoBehaviour {
 
-		private List<AFeature> featureList = new List<AFeature> ();
+		[SerializeField] private List<AFeature> featureList = new List<AFeature> ();
 
 		private AFeature currentFeature;
 		private Player player; 
 		private int defaultFeatureNumb = 0;
 
 		private void Start () {
-			GetDefaultFeature ();
+			//GetDefaultFeature ();
+			SelectFeature ();
 		}
 
-		private void Init() {
+		public void Init() {
 			//prend un player
 			player = null;
+		}
+
+		public void SelectFeature() {
+			FeaturesScreen.Instance.FeatureWheel (featureList);
 		}
 
 		private void GetDefaultFeature() {
