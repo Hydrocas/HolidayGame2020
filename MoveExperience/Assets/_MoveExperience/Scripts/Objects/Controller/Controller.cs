@@ -13,7 +13,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.Controller {
         [SerializeField] private string horizontalAxis = "Horizontal";
 		[SerializeField] private string verticalAxis = "Vertical";
 		[SerializeField] private string jumpAxis = "Jump"; 
-		[SerializeField] private string cancel = "Cancel"; 
+		[SerializeField] private string start = "Cancel"; 
 
 		public float GetAxisHorizontal {
 			get { return Input.GetAxis(horizontalAxis); }
@@ -25,8 +25,8 @@ namespace Com.HolidayGame.MoveExperience.Objects.Controller {
 			get { return Input.GetButtonDown(jumpAxis); }
 		}
 
-		public bool Cancel {
-			get { return Input.GetButtonDown(cancel); }
+		public bool Start {
+			get { return Input.GetButtonDown(start); }
 		}
 	}
 }

@@ -17,7 +17,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.Controller {
         public float GetAxisHorizontal { get => controller.GetAxisHorizontal; }
         public float GetAxisVertical { get => controller.GetAxisVertical; }
         public bool Jump { get => controller.Jump; }
-        public bool Start { get => controller.Cancel; }
+        public bool Start { get => controller.Start; }
 
 		[SerializeField] private Controller controller = default;  
 	}
