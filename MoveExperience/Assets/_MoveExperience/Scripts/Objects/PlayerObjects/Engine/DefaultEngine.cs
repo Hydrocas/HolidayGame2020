@@ -4,10 +4,12 @@
 ///-----------------------------------------------------------------
 
 using Com.HolidayGame.MoveExperience.Objects.Controller;
+using Com.HolidayGame.MoveExperience.SettingsPlayer;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 	public class DefaultEngine : AEngine {
+		[SerializeField] protected DefaultEngineSettings settings;
 
 		public override void Init(Rigidbody rb, ControllerSettings controller) {
 			base.Init(rb, controller);

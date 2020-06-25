@@ -3,12 +3,13 @@
 /// Date : 23/06/2020 15:44
 ///-----------------------------------------------------------------
 
+using Com.HolidayGame.Common.Utils.Game;
 using Com.HolidayGame.MoveExperience.Objects.Controller;
 using System;
 using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
-	public abstract class AEngine {
+	public abstract class AEngine : ADestroyObject {
 		protected Action _doAction;
 		public Action DoAction => _doAction;
 
@@ -22,7 +23,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 			this.controller = controller;
 		}
 
-		// ============================================================================
+		/*// ============================================================================
 		//							 ***** PAUSE / RESUME *****
 		// ============================================================================
 		public virtual void Pause() {
@@ -30,7 +31,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		}
 
 		public virtual void Resume() {
-		}
+		}*/
 
 		// ============================================================================
 		//							   ***** DOACTIONS *****

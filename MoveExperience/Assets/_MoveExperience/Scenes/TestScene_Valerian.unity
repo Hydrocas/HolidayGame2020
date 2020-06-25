@@ -283,6 +283,21 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 6321053276420396063, guid: ffa9ce4fae673ef4c8cc2d553f937c33,
+        type: 3}
+      propertyPath: salut.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321053276420396063, guid: ffa9ce4fae673ef4c8cc2d553f937c33,
+        type: 3}
+      propertyPath: engines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321053276420396063, guid: ffa9ce4fae673ef4c8cc2d553f937c33,
+        type: 3}
+      propertyPath: engines.Array.data[0]._engineName
+      value: DefaultEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa9ce4fae673ef4c8cc2d553f937c33, type: 3}
 --- !u!1 &824649342
