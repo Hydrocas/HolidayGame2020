@@ -19,7 +19,12 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		}
 
 		protected void DoActionMove() {
-			Debug.Log("Move");
+			rigidBody.transform.position += Vector3.forward * (5 * Time.deltaTime * controller.GetAxisVertical);
+			rigidBody.transform.position += Vector3.right * (5 * Time.deltaTime * controller.GetAxisHorizontal);
+
+			if (controller.Jump) {
+				rigidBody.AddForce(Vector3.up * 200);
+			}
 		}
 	}
 }
