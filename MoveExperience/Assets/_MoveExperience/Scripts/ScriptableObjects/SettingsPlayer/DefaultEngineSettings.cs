@@ -12,6 +12,12 @@ namespace Com.HolidayGame.MoveExperience.SettingsPlayer {
 		fileName = "DefaultEngine"
 	)]
 	
-	public class DefaultEngineSettings : AEngineSettings {
+	public class DefaultEngineSettings : ScriptableObject {
+		[Header("Settings")]
+		[SerializeField] protected float _speed = 5;
+		[SerializeField] protected float _jumpForce = 200;
+
+		public float Speed => _speed;
+		public float JumpForce => _jumpForce;
 	}
 }

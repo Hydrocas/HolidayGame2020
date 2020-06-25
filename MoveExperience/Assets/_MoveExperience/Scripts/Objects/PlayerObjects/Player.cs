@@ -15,7 +15,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		[SerializeField] protected Rigidbody rb = default;
 		[SerializeField] protected Transform enginesTranform = default;
 		[Space]
-		[SerializeField] protected Engines[] engines = default;
+		[SerializeField] protected EngineObject[] engineObjects = default;
 
 		protected AEngine engine;
 
@@ -51,9 +51,12 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 			}
 			engine = null;
 
-			for (int i = engines.Length - 1; i >= 0; i--) {
-				if (engines[i].EngineName == engineName) {
-					engine = Instantiate(engines[i].EnginePrefab, enginesTranform);
+			EngineObject lEngineObject;
+			for (int i = engineObjects.Length - 1; i >= 0; i--) {
+				lEngineObject = engineObjects[i];
+
+				if (lEngineObject.EngineName == engineName) {
+					engine = Instantiate(lEngineObject.EnginePrefab, enginesTranform);
 					break;
 				}
 			}
@@ -76,7 +79,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		}
 
 		[Serializable]
-		protected class Engines {
+		protected class EngineObject {
 			[SerializeField] protected string _engineName = default;
 			[SerializeField] protected AEngine _enginePrefab = default;
 
