@@ -21,13 +21,16 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects.Engine {
 		}
 
 		protected void DoActionMove() {
-			float speed = settings.Speed;
+			float lSpeed = settings.Speed;
+			float lDeltaTime = Time.deltaTime;
 
-			rigidBody.transform.position += Vector3.forward * (speed * Time.deltaTime * controller.GetAxisVertical);
-			rigidBody.transform.position += Vector3.right * (speed * Time.deltaTime * controller.GetAxisHorizontal);
+			rigidBody.transform.position += Vector3.forward * (lSpeed * lDeltaTime * controller.GetAxisVertical);
+			rigidBody.transform.position += Vector3.right * (lSpeed * Time.deltaTime * controller.GetAxisHorizontal);
+
+			//Use AddForce avec un autre forcemode pour le bouger ?
 
 			if (controller.Jump) {
-				rigidBody.AddForce(Vector3.up * settings.JumpForce);
+				rigidBody.AddForce(Vector3.up * settings.JumpForce, ForceMode.VelocityChange);
 			}
 		}
 	}

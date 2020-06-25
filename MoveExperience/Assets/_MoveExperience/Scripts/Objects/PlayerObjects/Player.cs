@@ -11,6 +11,15 @@ using UnityEngine;
 
 namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 	public class Player : AStateMachine {
+		[Serializable]
+		protected class EngineObject {
+			[SerializeField] protected string _engineName = default;
+			[SerializeField] protected AEngine _enginePrefab = default;
+
+			public string EngineName => _engineName;
+			public AEngine EnginePrefab => _enginePrefab;
+		}
+
 		[SerializeField] protected ControllerSettings controller = default;
 		[SerializeField] protected Rigidbody rb = default;
 		[SerializeField] protected Transform enginesTranform = default;
@@ -25,13 +34,13 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		protected override void SetResume() {
 			base.SetResume();
 			if (engine != null) engine.Resume();
-			//rb
+			//rb gérer la vélocité
 		}
 
 		protected override void SetPause() {
 			base.SetPause();
 			if (engine != null) engine.Pause();
-			//rb
+			//rb gérer la vélocité
 		}
 
 		// ============================================================================
@@ -49,7 +58,7 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 		public void InitEngine(string engineName) {
 			if (engine != null) {
 				engine.DestroyGameObject();
-				//Réfléchir a un ResetEngine
+				//Réfléchir a un ResetEngine ?
 			}
 			engine = null;
 
@@ -80,13 +89,16 @@ namespace Com.HolidayGame.MoveExperience.Objects.PlayerObjects {
 			engine.DoAction();
 		}
 
-		[Serializable]
-		protected class EngineObject {
-			[SerializeField] protected string _engineName = default;
-			[SerializeField] protected AEngine _enginePrefab = default;
+		// ============================================================================
+		//					        ***** COLLISION *****
+		// ============================================================================
 
-			public string EngineName => _engineName;
-			public AEngine EnginePrefab => _enginePrefab;
-		}
+		//Gérer la matrix de collisions
+		/*protected void OnCollisionEnter(Collision collision) {
+			foreach (ContactPoint item in collision.contacts) {
+				Debug.Log(item.point);
+				Debug.DrawRay(item.point, Vector3.up, Color.red, 100);
+			}
+		}*/
 	}
 }
